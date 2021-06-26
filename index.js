@@ -44,8 +44,13 @@ const questions = [
   },
   {
     type: "input",
-    message: "Provide contributor's email address",
-    name: "contributor_email",
+    message: "Provide instructions to run tests",
+    name: "tests",
+  },
+  {
+    type: "input",
+    message: "Provide your email address",
+    name: "email",
     validate: (email) => {
       isValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
       if (isValid) {
@@ -58,8 +63,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "Provide instructions to run tests",
-    name: "tests",
+    message: "Provide your github username",
+    name: "github",
   },
   {
     type: "rawlist",
