@@ -85,7 +85,7 @@ function showQuestions() {
     .then((response) => {
       // call writeToFile function with response data
       console.log(response);
-      writeToFile("./files/README.md", { ...response });
+      writeToFile("./readme_files/README.md", { ...response });
     });
 }
 
