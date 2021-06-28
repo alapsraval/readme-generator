@@ -15,9 +15,12 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  return ''
+function renderLicenseSection(license, copy_right_name) {
+  return `Copyright &copy; ${copy_right_name}. All rights reserved.
+
+Licensed under the [${license}](${renderLicenseLink(license)}) license.`;
 }
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -25,32 +28,43 @@ function generateMarkdown(data) {
   ${renderLicenseBadge(data.license)}
 
 ## Description
-${data.description}
+${data.description}.
+
+## Table of Contents
+1. [Dependencies](#dependencies)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Tests](#tests)
+5. [Contributions](#contributions)
+6. [Contact](#contact)
+7. [License](#license)
 
 ## Getting Started
 ### Dependencies
-\`${data.depedencies}\`
+${data.depedencies}
 
-### Installation Instructions
+### Installation
 \`${data.installation}\`
 
 ### Usage
-${data.usage}
+\`${data.usage}\`
 
-## Contributions
-${data.contributor_name} [GitHub](https://github.com/${data.contributor_github})
-
-## Tests
+### Tests
 \`${data.tests}\`
 
-## Contact me
-Checkout my [GitHub](https://github.com/${data.github})
+## Contributions
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+### Current contributors
+${data.contributor_name || 'None'} ${data.contributor_github ? `[GitHub](https://github.com/${data.contributor_github})`:``}
+
+## Contact
+Checkout my [GitHub](https://github.com/${data.github}).
 
 For additional questions, feel free to reach out to me at ${data.email}.
 
 ## License
-Copyright &copy; ${data.copy_right_name}. All rights reserved.
-Licensed under the ${data.license} license. 
+${renderLicenseSection(data.license, data.copy_right_name)}
 `;
 }
 

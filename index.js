@@ -29,23 +29,23 @@ const questions = [
   },
   {
     type: "input",
-    message: "What is the usage of your project?",
+    message: "Please provide instructions to run/use this project",
     name: "usage",
   },
   {
     type: "input",
-    message: "Did anyone contribute to your project?",
+    message: "Provide instructions to run tests",
+    name: "tests",
+  },
+  {
+    type: "input",
+    message: "Provide contributor's name",
     name: "contributor_name",
   },
   {
     type: "input",
     message: "Provide contributor's github username",
     name: "contributor_github",
-  },
-  {
-    type: "input",
-    message: "Provide instructions to run tests",
-    name: "tests",
   },
   {
     type: "input",
@@ -56,7 +56,7 @@ const questions = [
       if (isValid) {
         return true;
       } else {
-        console.log("Please enter a valid email")
+        console.log(" is not a valid email. Please reenter it.")
         return false;
       }
     }
@@ -85,7 +85,7 @@ function showQuestions() {
     .then((response) => {
       // call writeToFile function with response data
       console.log(response);
-      writeToFile("./readme_files/README.md", { ...response });
+      writeToFile("./readme/README.md", { ...response });
     });
 }
 
