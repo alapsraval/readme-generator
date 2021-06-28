@@ -1,24 +1,37 @@
-# Read Me Generator
+# Readme generator
   ![license badge](https://img.shields.io/badge/license-MIT-informational)
 
 ## Description
-This console application can be used to generate a read me file
+to create readme file using user input
+
+## Table of Contents
+1. [Getting Started](#getting started)
+    1. [Dependencies](#dependencies)
+    2. [Installation Instructions](#installation\ instructions)
+    3. [Usage](#(usage))
+    4. [Tests](#tests)
+2. [Contributions](#contributions)
+3. [Contact me](#contact\ me)
+4. [License](#license)
 
 ## Getting Started
 ### Dependencies
-`node and npm`
+node and npm
 
 ### Installation Instructions
 `npm install`
 
 ### Usage
-node index.js
+`node index.js`
 
 ## Contributions
-No [GitHub](https://github.com/alapsraval)
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+### Current contributors
+Alap rava [GitHub](https://github.com/alapsraval)
 
 ## Tests
-`npm run test`
+`node run tests`
 
 ## Contact me
 Checkout my [GitHub](https://github.com/alapsraval)
